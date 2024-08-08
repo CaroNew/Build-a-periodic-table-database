@@ -4,5 +4,5 @@ if [[ $1 ]]
 then 
     echo -e "\nhello\n"
 else
-    echo -e "\nPlease provide an element as an argument.\n"
+    echo "Please provide an element as an argument."
 fi
