@@ -19,14 +19,14 @@ then
 
     if [[ -z $SELECT_RESULT ]]
     then
-        echo -e "\nI could not find that element in the database\n"
+        echo -e "I could not find that element in the database."
     else
         #show message
         echo "$SELECT_RESULT" | while IFS="|" read TYPE_ID ATOMIC_NUMBER ATOMIC_MASS MELTING_POINT BOILING_POINT SYMBOL ELEMENT_NAME TYPE_NAME
         do
-            echo -e "\nThe element with atomic number $ATOMIC_NUMBER is $ELEMENT_NAME ($SYMBOL). It's a $TYPE_NAME, with a mass of $ATOMIC_MASS amu. Hydrogen has a melting point of $MELTING_POINT celsius and a boiling point of $BOILING_POINT celsius.\n"
+            echo -e "The element with atomic number $ATOMIC_NUMBER is $ELEMENT_NAME ($SYMBOL). It's a $TYPE_NAME, with a mass of $ATOMIC_MASS amu. Hydrogen has a melting point of $MELTING_POINT celsius and a boiling point of $BOILING_POINT celsius."
         done
     fi
 else
-    echo -e "\nPlease provide an element as an argument.\n"
+    echo "Please provide an element as an argument."
 fi
